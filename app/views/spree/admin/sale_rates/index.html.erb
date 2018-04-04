@@ -1,0 +1,43 @@
+<% content_for :page_title do %>
+    <%= plural_resource_name(Spree::SaleRate) %>
+<% end %>
+<% content_for :page_actions do %>
+    <%= button_link_to Spree.t(:new_sale_rate, scope: :sale_rates), new_object_url, icon: 'plus', class: 'btn-primary', id: 'admin_new_sale_rate' %>
+<% end %>
+
+
+<table class="table">
+  <thead>
+
+  <th><%= Spree.t(:currency) %></th>
+  <th><%= Spree.t(:rate, scope: :sale_rates) %></th>
+  <th><%= Spree.t(:actions, scope: :sale_rates) %></th>
+  </thead>
+
+  <tbody>
+
+  <tr>
+    <td><%= Spree::Config.currency %> (Основная)</td>
+    <td>1</td>
+    <td></td>
+  </tr>
+
+<% if @sale_rates.any? %>
+     <% @sale_rates.each do |rate| %>
+      <tr>
+        <td><%= rate.currency %></td>
+        <td><%= rate.rate %></td>
+        <td><%= link_to_edit rate %>
+          <%= link_to_delete rate %></td>
+      </tr>
+          <% end %>
+      </tbody>
+      </table>
+<% else %>
+      </tbody>
+      </table>
+    <div class="alert alert-warning no-objects-found">
+      <%= Spree.t(:no_resource_found, resource: Spree::SaleRate.model_name.human) %>,
+      <%= link_to Spree.t(:add_one), spree.new_admin_sale_rate_path %>!
+    </div>
+<% end %>

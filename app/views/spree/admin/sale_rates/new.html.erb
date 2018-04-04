@@ -1,0 +1,5 @@
+<% content_for :page_title do %>
+    <%= Spree.t(:add_sale_rate, scope: :sale_rates) %>
+<% end %>
+
+<%= render 'form', resource: @sale_rate %>

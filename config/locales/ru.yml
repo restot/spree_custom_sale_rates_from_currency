@@ -1,0 +1,20 @@
+ru:
+  activerecord:
+    attributes:
+      spree/sale_rate:
+    models:
+      spree/sale_rate:
+        few: Курсы
+        many: Курсы
+        one: Курс
+        other: Курсы
+  spree:
+    sale_rates:
+      link: Ссылка
+      new_sale_rate: "Новый курс"
+      actions: "Действия"
+      add_sale_rate: "Добавить курс"
+      back_to_resource_list: "Вернутся к списку курсов"
+      currency: "Валюта"
+      rate: "Курс к основной валюте"
+      editing_rate: "Изменить курс"
