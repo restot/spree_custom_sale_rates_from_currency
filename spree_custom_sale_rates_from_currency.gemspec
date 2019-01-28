@@ -7,7 +7,7 @@ require 'spree_custom_sale_rates_from_currency/version'
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_custom_sale_rates_from_currency'
-  s.version     = '0.0.11'
+  s.version     = '0.0.12'
   s.summary     = 'Add extension summary here'
   s.description = 'Add (optional) extension description here'
   s.required_ruby_version = '>= 2.2.7'
